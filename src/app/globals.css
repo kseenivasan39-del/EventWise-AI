@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff5f8;
+  --foreground: #1e1b4b;
+  --font-plus-jakarta: var(--font-plus-jakarta);
+}
+
+body {
+  background-color: #fff5f8;
+  color: #1e1b4b;
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glass & Card styles matching screenshot */
+.bg-rose-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+}
+
+.shadow-pink-soft {
+  box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.1), 0 8px 10px -6px rgba(244, 63, 94, 0.05);
+}
+
+.shadow-pink-glow {
+  box-shadow: 0 12px 30px -4px rgba(236, 72, 153, 0.35);
+}
+
+.shadow-card-subtle {
+  box-shadow: 0 4px 20px -2px rgba(251, 113, 133, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* 3D isometric perspective for hero dashboard */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.hero-dashboard-card {
+  transform: rotateY(-8deg) rotateX(4deg) rotateZ(1deg);
+  transition: transform 0.4s ease;
+}
+
+.hero-dashboard-card:hover {
+  transform: rotateY(-2deg) rotateX(1deg) rotateZ(0deg);
+}
