@@ -57,7 +57,7 @@ export function Navigation() {
   }, []);
 
   // Primary workspace links visible in the clean bar
-  const primaryLinks = [
+  const primaryLinks: { href: string; label: string; badge?: boolean; isAI?: boolean }[] = [
     { href: '/', label: 'Home' },
     { href: '/dashboard', label: 'Dashboard' },
     { href: '/timeline', label: 'Timeline' },
@@ -68,7 +68,7 @@ export function Navigation() {
   ];
 
   // Secondary tools tucked into an elegant dropdown
-  const secondaryTools = [
+  const secondaryTools: { href: string; label: string; icon: any; desc: string; isAI?: boolean; badge?: boolean }[] = [
     { href: '/export', label: 'Export & Share Plan', icon: Share2, desc: 'Generate PDF or shareable summary' },
     { href: '/wizard', label: 'AI Planning Wizard', icon: Sparkles, desc: 'Generate a new plan from text prompt' },
   ];
