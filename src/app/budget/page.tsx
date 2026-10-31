@@ -5,12 +5,8 @@ import {
   Coins, 
   Plus, 
   AlertTriangle, 
-  TrendingUp, 
   Receipt, 
-  Check, 
-  Sparkles,
-  PieChart as PieIcon,
-  BarChart3
+  Check 
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';

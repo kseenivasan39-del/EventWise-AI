@@ -55,7 +55,7 @@ export function getSessionUser(req: NextRequest): AuthUser | null {
       name: decoded.name,
       role: decoded.role,
     };
-  } catch (err) {
+  } catch {
     return null;
   }
 }

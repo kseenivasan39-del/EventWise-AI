@@ -6,10 +6,7 @@ import {
   Download, 
   Coins, 
   CalendarClock,
-  Store,
-  MapPin,
-  Calendar,
-  Users
+  Store
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
 import { Button } from '@/components/ui/Button';

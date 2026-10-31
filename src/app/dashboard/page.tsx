@@ -11,7 +11,6 @@ import {
   AlertTriangle, 
   TrendingUp, 
   ArrowUpRight,
-  Sparkles,
   Bot,
   MapPin,
   Calendar,

@@ -6,11 +6,9 @@ import {
   Send, 
   Sparkles, 
   Languages, 
-  Check,
-  Coins
+  Check
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { CopilotRecommendation } from '@/lib/ai/copilotEngine';
@@ -25,7 +23,7 @@ const QUICK_QUERIES = [
 ];
 
 export default function CopilotPage() {
-  const { currentPlan, updateCategory, addTask } = useEventContext();
+  const { currentPlan, updateCategory } = useEventContext();
 
   const [inputQuery, setInputQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);

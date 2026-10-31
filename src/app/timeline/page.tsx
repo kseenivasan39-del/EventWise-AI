@@ -2,20 +2,18 @@
 
 import React, { useState } from 'react';
 import { 
-  CalendarClock, 
   CheckCircle2, 
   Plus, 
   AlertCircle, 
   GitBranch, 
   Filter,
-  Search,
-  Check
+  Search
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
+import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
-import { Task, TaskPriority } from '@/types/event';
+import { TaskPriority } from '@/types/event';
 import { validateTaskDependencies, getDownstreamImpact } from '@/lib/planning/dependencyEngine';
 
 export default function TimelinePage() {

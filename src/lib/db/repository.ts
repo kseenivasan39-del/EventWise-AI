@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { FullEventPlan, EventModel } from '@/types/event';
-import { getSupabaseAdmin, isSupabaseConfigured } from './supabase';
+import { getSupabaseAdmin } from './supabase';
 import { TAMIL_WEDDING_DEMO } from '@/lib/data/sampleScenarios';
 
 const DATA_DIR = path.join(process.cwd(), '.data');
@@ -138,7 +138,7 @@ export async function getEventPlanById(eventId: string, userId?: string): Promis
 export async function saveEventPlan(plan: FullEventPlan, userId?: string): Promise<FullEventPlan> {
   ensureDataDir();
   const raw = fs.readFileSync(EVENTS_FILE, 'utf-8');
-  let allPlans: FullEventPlan[] = JSON.parse(raw);
+  const allPlans: FullEventPlan[] = JSON.parse(raw);
 
   // Set ownership if missing
   if (userId && !plan.event.userId) {

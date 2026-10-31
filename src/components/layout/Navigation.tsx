@@ -5,22 +5,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
   Calendar,
-  LayoutDashboard, 
-  CalendarCheck2, 
-  Coins, 
-  Store, 
-  ShieldAlert, 
-  Bot, 
   Share2, 
   Bell, 
   LogOut, 
-  Plus,
-  Trash2,
-  ChevronDown,
-  Sparkles,
-  SlidersHorizontal,
-  Menu,
-  X
+  Plus, 
+  Trash2, 
+  ChevronDown, 
+  Sparkles, 
+  Menu, 
+  X 
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
 import { useAuth } from '@/context/AuthContext';

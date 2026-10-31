@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { 
-  ShieldAlert, 
   CloudRain, 
   Building2, 
   TrendingUp, 
@@ -10,8 +9,6 @@ import {
   Sparkles, 
   CheckCircle2, 
   GitCommit,
-  ArrowRight,
-  Flame,
   Check
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
@@ -22,7 +19,7 @@ import { IncidentType, RecoveryProposal } from '@/types/event';
 import { formatCurrency } from '@/lib/planning/budgetEngine';
 
 export default function RecoveryPage() {
-  const { currentPlan, metrics, addIncident, applyRecovery } = useEventContext();
+  const { currentPlan, addIncident, applyRecovery } = useEventContext();
 
   const [isSimulating, setIsSimulating] = useState(false);
   const [activeSimulation, setActiveSimulation] = useState<any | null>(null);

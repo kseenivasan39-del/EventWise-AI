@@ -17,27 +17,19 @@ import {
   Users,
   CheckCircle2,
   Send,
-  Plus,
-  Compass,
   FileText,
   Clock,
   MapPin,
   Sliders,
-  DollarSign,
   ChevronDown
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { formatCurrency } from '@/lib/planning/budgetEngine';
 
 export default function LandingPage() {
   const router = useRouter();
-  const { currentPlan, loadScenario, setCustomPlan } = useEventContext();
+  const { loadScenario } = useEventContext();
 
   const [promptText, setPromptText] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Event templates matching screenshot
   const TEMPLATES = [

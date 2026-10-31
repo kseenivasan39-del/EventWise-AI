@@ -2,14 +2,12 @@
 
 import React, { useState } from 'react';
 import { 
-  Store, 
   Plus, 
   Phone, 
   Mail, 
   MapPin, 
   SlidersHorizontal,
-  Search,
-  Check
+  Search
 } from 'lucide-react';
 import { useEventContext } from '@/context/EventContext';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';

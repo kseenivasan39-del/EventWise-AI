@@ -2,8 +2,7 @@ import {
   FullEventPlan, 
   Incident, 
   RecoveryProposal, 
-  IncidentType, 
-  RecoveryAction 
+  IncidentType 
 } from '@/types/event';
 import { getDownstreamImpact } from './dependencyEngine';
 import { calculateBudgetMetrics } from './budgetEngine';
@@ -43,7 +42,7 @@ export function simulateCrisisRecovery(
 
   let directCostImpact = 0;
   let affectedTaskIds: string[] = [];
-  let affectedVendorIds: string[] = [];
+  const affectedVendorIds: string[] = [];
   let severity: 'low' | 'medium' | 'high' | 'critical' = 'medium';
   let defaultTitle = '';
   let defaultDesc = '';
@@ -76,7 +75,6 @@ export function simulateCrisisRecovery(
       affectedTaskIds = Array.from(allAffectedTasks);
 
       // Proposal 1: Emergency Rebooking + Contingency Draw
-      const contingencyAvailable = currentMetrics.contingencyReserve;
       const expectedPremium = 35000;
       directCostImpact = expectedPremium;
 

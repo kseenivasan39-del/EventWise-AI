@@ -2,13 +2,12 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Sparkles, ArrowRight, CheckCircle2, AlertCircle, Wand2, Calendar, Users, MapPin, Coins, Sliders } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2, AlertCircle, Wand2 } from 'lucide-react';
 import { ParsedNLRequest } from '@/types/event';
 import { useEventContext } from '@/context/EventContext';
 import { Button } from '@/components/ui/Button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
-import { formatCurrency } from '@/lib/planning/budgetEngine';
 
 const PROMPT_TEMPLATES = [
   {
